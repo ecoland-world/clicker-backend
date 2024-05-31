@@ -1,0 +1,27 @@
+{
+  "name": "eco-clicker-backend",
+  "version": "1.0.0",
+  "description": "backend for eco clicker",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecoland-world/clicker-backend.git"
+  },
+  "author": "fac3m4n",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecoland-world/clicker-backend/issues"
+  },
+  "homepage": "https://github.com/ecoland-world/clicker-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
