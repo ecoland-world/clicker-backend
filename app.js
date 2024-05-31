@@ -5,26 +5,20 @@ var cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 const Game = require("./models/game");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
 
-const connectRetry = () => {
-  mongoose.connect(
-    process.env.MONGODB_URI,
-    {
+const connectRetry = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
-      useCreateIndex: true,
-      reconnectTries: 30,
-      reconnectInterval: 1000,
-      poolSize: 500,
-    },
-    (err) => {
-      if (err) {
-        console.log("Mongoose connection error:", err);
-        setTimeout(connectRetry, 5000);
-      }
-    }
-  );
+    });
+  } catch (err) {
+    console.log("Mongoose connection error:", err);
+    setTimeout(connectRetry, 5000);
+  }
 };
 
 connectRetry();
