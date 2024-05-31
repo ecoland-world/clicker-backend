@@ -1,13 +1,12 @@
 doctype html
-html
-
-	head
-		title Future Farm Lands
-		link(rel="shortcut icon" href="https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/favicon.ico" type="image/x-icon")
-		link(rel="icon" href="https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/favicon.ico" type="image/x-icon")
-		link(rel='stylesheet', type='text/css', href='/style.css')
-
-	body
-		h1 loading
-		h2 loading
-		script(type="text/javascript" src="https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/bundle.min.js")
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(rel="icon" type="image/png" href="./favicon.png")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    link(rel="stylesheet" href="./style.css")
+    title Ecoland - Clicker
+    script(defer src="https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/bundle.min.js")
+  body
+    #app
+      #game-container
