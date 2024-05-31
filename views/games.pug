@@ -1,0 +1,58 @@
+DOCTYPE html
+html
+
+	head
+		title Future Farm Lands - Ranking
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no')
+
+		link(rel="shortcut icon" href="https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/favicon.ico" type="image/x-icon")
+		link(rel="icon" href="https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/favicon.ico" type="image/x-icon")
+		link(rel='stylesheet', type='text/css', href='/style.css')
+	body
+
+		img.logo(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/ui/ecoland-logo.png')
+		a(href='/') Play
+		.all
+			.header
+				.cell Name
+				.cell.level Level
+				.cell Title
+				.cell Money Generated
+				.cell-large
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/shovel.png')
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/clio.png')
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/poultry.png')
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/jewelery.png')
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/winery.png')
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/quest.png')
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/fishery.png')
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/battery.png')
+					.business
+						img(src='https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/sprites/business/reaktor.png')
+			each g in games
+				.row(data-id=g.id)
+					.cell= g.character.name
+					.cell.level= g.character.level
+					.cell= g.character.title
+					.cell(data-money=(g.game.money+g.game.moneySpent))= g.game.money+g.game.moneySpent
+					.cell-large
+						.business= g.businesses.SHOVEL.investments
+						.business= g.businesses.CLIO.investments
+						.business= g.businesses.POULTRY.investments
+						.business= g.businesses.JEWELERY.investments
+						.business= g.businesses.WINERY.investments
+						.business= g.businesses.QUEST.investments
+						.business= g.businesses.FISHERY.investments
+						.business= g.businesses.BATTERY.investments
+						.business= g.businesses.REAKTOR.investments
+
+		script(src='/games.js')

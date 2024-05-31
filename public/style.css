@@ -1,3 +1,21 @@
+@font-face {
+	font-family: 'CalvertMT';
+    src: url('https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/fonts/CalvertMT.woff2') format('woff2'),
+         url('https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/fonts/CalvertMT.woff') format('woff'),
+         url('https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/fonts/CalvertMT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+	font-family: 'CalvertMT-Bold';
+    src: url('https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/fonts/CalvertMTStd-Bold.woff') format('woff'),
+         url('https://ecoland.s3.eu-central-1.amazonaws.com/future-farm/assets/fonts/CalvertMTStd-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 html,
 body {
 	margin: 0 auto;
